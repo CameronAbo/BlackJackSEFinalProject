@@ -6,7 +6,7 @@ public class RuleSet
     int     playerNumber;
     int     difficulty;
     int     deckCount;
-    double  initialBalance;
+    float  initialBalance;
     boolean reshuffleDeck;
 
     //Constructor
@@ -15,7 +15,7 @@ public class RuleSet
         playerNumber = 0;
         difficulty = 0;
         deckCount = 1;
-        initialBalance = 10000.00;
+        initialBalance = 10000.00F;
         reshuffleDeck = false;
     }
 
@@ -66,7 +66,7 @@ public class RuleSet
         this.difficulty = difficulty;
     }
 
-    public void setInitialBalance(double initialBalance) {
+    public void setInitialBalance(float initialBalance) {
         this.initialBalance = initialBalance;
     }
 
