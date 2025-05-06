@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/balanceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Balance: $1000"
+        android:textSize="18sp"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/playerHandText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player Hand:" />
+
+    <TextView
+        android:id="@+id/dealerHandText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dealer Hand:" />
+
+    <EditText
+        android:id="@+id/betInput"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter your bet"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/placeBetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Place Bet" />
+
+    <Button
+        android:id="@+id/hitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hit"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/standButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stand"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status will be shown here"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView_game_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Loading game..."
+        android:textSize="18sp"
+        android:padding="16dp"/>
+
+</LinearLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Number of Players -->
+        <TextView
+            android:text="Number of Players"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp">
+
+
+            <Button
+                android:id="@+id/button_decrease_player"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="5"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/textview_player_count"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="1"
+                android:textSize="18sp"
+                android:layout_weight="20"
+                android:layout_marginHorizontal="16dp" />
+
+            <Button
+                android:id="@+id/button_increase_player"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="5"
+                android:text="+" />
+        </LinearLayout>
+
+        <!-- Difficulty -->
+<!--        <TextView-->
+<!--            android:text="Difficulty"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="16dp"/>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:layout_marginTop="4dp">-->
+
+
+<!--            <Button-->
+<!--                android:id="@+id/button_decrease_difficulty"-->
+<!--                android:layout_width="48dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:text="-" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/textview_difficulty_count"-->
+<!--                android:layout_width="48dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:gravity="center"-->
+<!--                android:text="easy"-->
+<!--                android:textSize="18sp"-->
+<!--                android:layout_marginHorizontal="16dp" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/button_increase_difficulty"-->
+<!--                android:layout_width="48dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:text="+" />-->
+<!--        </LinearLayout>-->
+
+        <!-- Number of Decks -->
+        <TextView
+            android:text="Number of Decks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp">
+
+
+            <Button
+                android:id="@+id/button_decrease_deck"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="5"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/textview_deck_count"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="1"
+                android:textSize="18sp"
+                android:layout_weight="20"
+                android:layout_marginHorizontal="16dp" />
+
+            <Button
+                android:id="@+id/button_increase_deck"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="5"
+                android:text="+" />
+        </LinearLayout>
+
+        <!-- Initial Balance -->
+        <TextView
+            android:text="Initial Balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/edittext_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Enter initial balance" />
+
+        <!-- Reshuffle Toggle -->
+<!--        <TextView-->
+<!--            android:text="Reshuffle Deck"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="16dp"/>-->
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_reshuffle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable Deck Reshuffle" />
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_marginTop="24dp"/>
+    </LinearLayout>
+</LinearLayout>
