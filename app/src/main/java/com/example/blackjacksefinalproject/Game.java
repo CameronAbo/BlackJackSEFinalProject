@@ -5,13 +5,11 @@ public class Game {
     private Player player;
     private Player dealer;
 
-
-    public Game() {
-        deck = new Deck();
-        player = new Player(1000);
+    public Game(float initialBalance, int deckCount) {
+        deck = new Deck(deckCount);              // Uses deck count from settings
+        player = new Player(initialBalance);     // Uses balance from settings
         dealer = new Player(0);
     }
-
 
     public void resetHands() {
         player.clearHand();
@@ -19,13 +17,11 @@ public class Game {
         deck.shuffle();
     }
 
-
     public void dealInitialCards() {
         player.addCardToHand(deck.dealCard());
         dealer.addCardToHand(deck.dealCard());
         player.addCardToHand(deck.dealCard());
     }
-
 
     public void dealerDrawUntil17() {
         while (dealer.handValue() < 17) {
@@ -33,36 +29,29 @@ public class Game {
         }
     }
 
-
     public void playerHits() {
         player.addCardToHand(deck.dealCard());
     }
-
 
     public void dealerHits() {
         dealer.addCardToHand(deck.dealCard());
     }
 
-
     public Player getPlayer() {
         return player;
     }
-
 
     public Player getDealer() {
         return dealer;
     }
 
-
     public void placeBet(double amount) {
         player.placeBet(amount);
     }
 
-
     public String getResult() {
         int playerTotal = player.handValue();
         int dealerTotal = dealer.handValue();
-
 
         if (playerTotal > 21) {
             player.forfeit();
