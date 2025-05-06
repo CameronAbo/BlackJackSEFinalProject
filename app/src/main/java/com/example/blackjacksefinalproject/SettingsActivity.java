@@ -121,10 +121,7 @@ public class SettingsActivity extends AppCompatActivity {
         editor.putBoolean("reshuffle", switchReshuffle.isChecked());
         editor.apply();
 
-        ruleSet.playerNumber = playerCount;
-        ruleSet.initialBalance = balance;
-        ruleSet.deckCount = deckCount;
-        ruleSet.reshuffleDeck = switchReshuffle.isChecked();
+
 
 
         Toast.makeText(this, "Settings saved", Toast.LENGTH_SHORT).show();
